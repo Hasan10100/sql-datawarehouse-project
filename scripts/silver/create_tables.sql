@@ -17,14 +17,15 @@ CREATE TABLE silver.crm_customer_info (
 -- Drop and create silver.crm_prd_info
 DROP TABLE IF EXISTS silver.crm_prd_info;
 CREATE TABLE silver.crm_prd_info (
-    prd_id              INT NULL,
-    prd_key             VARCHAR(50) NULL,
-    prd_nm              VARCHAR(50) NULL,
-    prd_cost            INT NULL,
-    prd_line            VARCHAR(50) NULL,
-    prd_start_dt        DATETIME NULL,
-    prd_end_dt          DATETIME NULL,
-    dwh_create_date     DATETIME2 DEFAULT GETDATE()
+    prd_id          INT,
+    cat_id          NVARCHAR(50),
+    prd_key         NVARCHAR(50),
+    prd_nm          NVARCHAR(50),
+    prd_cost        INT,
+    prd_line        NVARCHAR(50),
+    prd_start_dt    DATE,
+    prd_end_dt      DATE,
+    dwh_create_date DATETIME2 DEFAULT GETDATE()
 );
 
 
@@ -34,9 +35,9 @@ CREATE TABLE silver.crm_sales_details (
     sls_ord_num         VARCHAR(50) NULL,
     sls_prd_key         VARCHAR(50) NULL,
     sls_cust_id         INT NULL,
-    sls_order_dt        INT NULL,
-    sls_ship_dt         INT NULL,
-    sls_due_dt          INT NULL,
+    sls_order_dt        DATE NULL,
+    sls_ship_dt         DATE NULL,
+    sls_due_dt          DATE NULL,
     sls_sales           INT NULL,
     sls_quantity        INT NULL,
     sls_price           INT NULL,
