@@ -1,8 +1,8 @@
 USE DataWarehouse;
 
--- Drop and create bronze_crm_customer_info
-DROP TABLE IF EXISTS bronze_crm_customer_info;
-CREATE TABLE bronze_crm_customer_info (
+-- Drop and create bronze.crm_customer_info
+DROP TABLE IF EXISTS bronze.crm_customer_info;
+CREATE TABLE bronze.crm_customer_info (
     cst_id              INT NULL,
     cst_key             VARCHAR(50) NULL,
     cst_firstname       VARCHAR(50) NULL,
@@ -13,9 +13,9 @@ CREATE TABLE bronze_crm_customer_info (
 );
 
 
--- Drop and create bronze_crm_prd_info
-DROP TABLE IF EXISTS bronze_crm_prd_info;
-CREATE TABLE bronze_crm_prd_info (
+-- Drop and create bronze.crm_prd_info
+DROP TABLE IF EXISTS bronze.crm_prd_info;
+CREATE TABLE bronze.crm_prd_info (
     prd_id       INT NULL,
     prd_key      VARCHAR(50) NULL,
     prd_nm       VARCHAR(50) NULL,
@@ -26,9 +26,9 @@ CREATE TABLE bronze_crm_prd_info (
 );
 
 
--- Drop and create bronze_crm_sales_details
-DROP TABLE IF EXISTS bronze_crm_sales_details;
-CREATE TABLE bronze_crm_sales_details (
+-- Drop and create bronze.crm_sales_details
+DROP TABLE IF EXISTS bronze.crm_sales_details;
+CREATE TABLE bronze.crm_sales_details (
     sls_ord_num  VARCHAR(50) NULL,
     sls_prd_key  VARCHAR(50) NULL,
     sls_cust_id  INT NULL,
@@ -41,26 +41,26 @@ CREATE TABLE bronze_crm_sales_details (
 );
 
 
--- Drop and create bronze_erp_loc_a101
-DROP TABLE IF EXISTS bronze_erp_loc_a101;
-CREATE TABLE bronze_erp_loc_a101 (
+-- Drop and create bronze.erp_loc_a101
+DROP TABLE IF EXISTS bronze.erp_loc_a101;
+CREATE TABLE bronze.erp_loc_a101 (
     cid    VARCHAR(50) NULL,
     cntry  VARCHAR(50) NULL
 );
 
 
--- Drop and create bronze_erp_cust_az12
-DROP TABLE IF EXISTS bronze_erp_cust_az12;
-CREATE TABLE bronze_erp_cust_az12 (
+-- Drop and create bronze.erp_cust_az12
+DROP TABLE IF EXISTS bronze.erp_cust_az12;
+CREATE TABLE bronze.erp_cust_az12 (
     cid    VARCHAR(50) NULL,
     bdate  DATE NULL,
     gen    VARCHAR(50) NULL
 );
 
 
--- Drop and create bronze_erp_px_cat_g1v2
-DROP TABLE IF EXISTS bronze_erp_px_cat_g1v2;
-CREATE TABLE bronze_erp_px_cat_g1v2 (
+-- Drop and create bronze.erp_px_cat_g1v2
+DROP TABLE IF EXISTS bronze.erp_px_cat_g1v2;
+CREATE TABLE bronze.erp_px_cat_g1v2 (
     id           VARCHAR(50) NULL,
     cat          VARCHAR(50) NULL,
     subcat       VARCHAR(50) NULL,
